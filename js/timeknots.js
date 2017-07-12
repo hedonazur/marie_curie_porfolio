@@ -154,7 +154,8 @@ var TimeKnots = {
           return x;
         }
         return Math.floor(cfg.width/2)
-    }).on("mouseover", function(d){
+    })
+    /*.on("mouseover", function(d){
       if(cfg.dateDimension){
         var format = d3.time.format(cfg.dateFormat);
         var datetime = format(new Date(d.date));
@@ -167,6 +168,7 @@ var TimeKnots = {
       d3.select(this)
       .style("fill", function(d){if(d.color != undefined){return d.color} return cfg.color}).transition()
       .duration(100).attr("r",  function(d){if(d.radius != undefined){return Math.floor(d.radius*1.5)} return Math.floor(cfg.radius*1.5)});
+      //cuadro que aparece a la derecha. Cuando lo pongo en columnas no aparece :(
       tip.html("");
       if(d.img != undefined){
         tip.append("img").style("float", "left").style("margin-right", "4px").attr("src", d.img).attr("width", "64px");
@@ -176,7 +178,7 @@ var TimeKnots = {
       .duration(100)
       .style("opacity", .9);
 
-    })
+    })*/
     .on("mouseout", function(){
         d3.select(this)
         .style("fill", function(d){if(d.background != undefined){return d.background} return cfg.background}).transition()
